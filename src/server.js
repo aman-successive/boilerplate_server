@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger('dev'));
 
-mongoose.connect('mongodb://localhost/boilerplate')
+mongoose.connect('mongodb://localhost/boilerplate', { useNewUrlParser: true })
   .then(()=> {
     console.log('Database connected');
   })
